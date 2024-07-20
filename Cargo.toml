@@ -1,0 +1,19 @@
+[package]
+name = "liber-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["tremwil@gmail.com"]
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = true
+debug = false
+debug-assertions = false
+overflow-checks = false
+strip = true
